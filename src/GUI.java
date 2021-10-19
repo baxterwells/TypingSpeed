@@ -20,6 +20,7 @@ public class GUI implements ActionListener, KeyListener {
     private JTextField textField;
     private JLabel lInstructions;
     private JLabel lCount;
+    private ThreadPause TP = new ThreadPause();
 
     public GUI() {
         frame = new JFrame();
@@ -58,15 +59,18 @@ public class GUI implements ActionListener, KeyListener {
     public void keyTyped(KeyEvent e) {
 //        count++;
 //        lCount.setText("Inputs: " + count);
+//        TP.wait(1);
     } // end keyTyped(KeyEvent)
 
     public void keyPressed(KeyEvent e) {
-        count++;
-        lCount.setText("Inputs: " + count);
+//        count++;
+//        lCount.setText("Inputs: " + count);
+//        TP.wait(1);
     } // end keyPressed(KeyEvent)
 
     public void keyReleased(KeyEvent e) {
-//        count++;
-//        lCount.setText("Inputs: " + count);
+        count++;
+        lCount.setText("Inputs: " + count);
+        TP.wait(1);
     } // end keyReleased(KeyEvent)
 } // end Main
