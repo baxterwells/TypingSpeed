@@ -2,6 +2,8 @@ import java.awt.BorderLayout;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 
 import javax.swing.BorderFactory;
 import javax.swing.JFrame;
@@ -10,7 +12,7 @@ import javax.swing.JLabel;
 import javax.swing.JTextField;
 
 
-public class GUI implements ActionListener {
+public class GUI implements ActionListener, KeyListener {
 
     private int count = 0;
     private JFrame frame;
@@ -25,7 +27,8 @@ public class GUI implements ActionListener {
         lInstructions = new JLabel("Type here:");
         lCount = new JLabel("Inputs: 0");
         textField = new JTextField(20);
-        textField.addActionListener(this);
+        textField.addKeyListener(this);
+//        textField.addActionListener(this);
 
         panel = new JPanel();
         panel.setBorder(BorderFactory
@@ -51,4 +54,19 @@ public class GUI implements ActionListener {
         count++;
         lCount.setText("Inputs: " + count);
     } // end actionPerformed(ActionEvent)
+
+    public void keyTyped(KeyEvent e) {
+//        count++;
+//        lCount.setText("Inputs: " + count);
+    } // end keyTyped(KeyEvent)
+
+    public void keyPressed(KeyEvent e) {
+        count++;
+        lCount.setText("Inputs: " + count);
+    } // end keyPressed(KeyEvent)
+
+    public void keyReleased(KeyEvent e) {
+//        count++;
+//        lCount.setText("Inputs: " + count);
+    } // end keyReleased(KeyEvent)
 } // end Main
