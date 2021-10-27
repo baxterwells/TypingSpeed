@@ -63,14 +63,14 @@ public class GUI implements ActionListener, KeyListener {
     } // end keyTyped(KeyEvent)
 
     public void keyPressed(KeyEvent e) {
-//        count++;
-//        lCount.setText("Inputs: " + count);
+        count++;
+        lCount.setText("Inputs: " + count);
 //        TP.wait(1);
     } // end keyPressed(KeyEvent)
 
     public void keyReleased(KeyEvent e) {
-        count++;
-        lCount.setText("Inputs: " + count);
-        TP.wait(1);
+//        count++;
+//        lCount.setText("Inputs: " + count);
+//        TP.pause(1);
     } // end keyReleased(KeyEvent)
 } // end Main
